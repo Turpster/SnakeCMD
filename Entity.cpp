@@ -2,7 +2,7 @@
 #include "Position.h"
 #include "Vector.h"
 
-Entity::Entity(const Position& pos, const Vector& vector, const char const model, const char const trail)
+Entity::Entity(const Position& pos, const Vector& vector, const char& model, const char& trail)
 {
 	this->pos = pos;
 	this->vector = vector;
@@ -14,6 +14,7 @@ void Entity::tick()
 {
 	this->pos.x += this->vector.xv;
 	this->pos.y += this->vector.yv;
+}
 
 void Entity::render(const int& x, const int& y)
 {

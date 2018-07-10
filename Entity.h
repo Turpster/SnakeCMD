@@ -12,7 +12,7 @@ public:
 
 	char model, trail;
 
-	Entity(const Position& pos, const Vector& vector, const char const model, const char const trail);
+	Entity(const Position& pos, const Vector& vector, const char& model, const char& trail);
 	void tick();
 	void render(const int& x, const int& y);
 	
