@@ -1,6 +1,10 @@
 #include "Program.h"
+#include <iostream>
 
-Program::Program() {}
+Program::Program() 
+{
+	system("color F0");
+}
 
 int Program::start()
 {
