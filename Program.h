@@ -7,7 +7,7 @@ class Program
 protected:
 	Handler handler;
 public:
-	static const int const width = 117; static const int const height = 20;
+	static const int const width = 70; static const int const height = 20;
 
 	bool running = false;
 

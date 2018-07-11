@@ -1,16 +1,20 @@
 #pragma once
+#include <iostream>
 #include <list>
 #include "Player.h"
+#include "Entity.h"
 #include "Position.h"
 #include "Vector.h"
+
 class Handler
 {
 public:
-
-	Player player = *(new Player(*(new Position(3, 3)), *(new Vector(1, 0)), '+', '~'));
+	std::list<Entity> entities;
 
 	Handler();
 	~Handler();
 	void tick();
+	void addEntity(const Entity& entity);
+	Entity* getEntityHere(const int& x, const int& y);
 };
 
