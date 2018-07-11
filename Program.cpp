@@ -3,7 +3,7 @@
 
 Program::Program() 
 {
-	system("color F0");
+	system("color 0F");
 }
 
 int Program::start()
