@@ -8,7 +8,7 @@
 
 Handler::Handler()
 {
-	this->addEntity(*(new Player(*(new Position(3, 3)), *(new Vector(1, 0)), '+', '~')));
+	this->addEntity(*(new Player(*(new Position(3, 3)), *(new Vector(1, 0)), '+', '~', 4)));
 }
 
 
@@ -45,9 +45,9 @@ void Handler::tick()
 		}
 		std::cout << std::endl;
 	}
-	for (std::list<Entity>::iterator it = this->entities.begin(); it != this->entities.end(); std::advance(it, 1))
+	for (auto &entity : this->entities)
 	{
-		it->tick();
+		entity.tick();
 	}
 
 }
@@ -58,11 +58,23 @@ void Handler::addEntity(const Entity& entity)
 
 Entity* Handler::getEntityHere(const int& x, const int& y)
 {
-	for (std::list<Entity>::iterator it = this->entities.begin(); it != this->entities.end(); std::advance(it, 1))
+	for (auto &entity : this->entities)
 	{
-		if (it->pos.x == x && it->pos.y == y)
+		if (entity.pos.x == x && entity.pos.y == y)
 		{
-			return &(*it);
+			return &entity;
+		}
+		Player* player = dynamic_cast<Player*>(&entity);
+		
+		if (player)
+		{
+			for (auto &pos : player->trailLocs)
+			{
+				if (pos.x == player->pos.x && pos.y == player->pos.y)
+				{
+					return &entity;
+				}
+			}
 		}
 	}
 	return nullptr;

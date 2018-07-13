@@ -2,12 +2,11 @@
 #include "Position.h"
 #include "Vector.h"
 
-Entity::Entity(const Position& pos, const Vector& vector, const char& model, const char& trail)
+Entity::Entity(const Position& pos, const Vector& vector, const char& model)
 {
 	this->pos = pos;
 	this->vector = vector;
 	this->model = model;
-	this->trail = trail;
 }
 
 void Entity::tick()
@@ -24,12 +23,12 @@ void Entity::render(const int& x, const int& y)
 	}
 }
 
+
 Entity::~Entity()
 {
 	delete &(this->pos);
 	delete &(this->vector);
 	delete &(this->model);
-	delete &(this->trail);
 }
 
 

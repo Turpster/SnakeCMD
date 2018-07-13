@@ -10,11 +10,11 @@ public:
 	Position pos;
 	Vector vector;
 
-	char model, trail;
+	char model;
 
-	Entity(const Position& pos, const Vector& vector, const char& model, const char& trail);
-	void tick();
-	void render(const int& x, const int& y);
+	Entity(const Position& pos, const Vector& vector, const char& model);
+	virtual void tick();
+	virtual void render(const int& x, const int& y);
 	
 	~Entity();
 };
