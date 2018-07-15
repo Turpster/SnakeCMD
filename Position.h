@@ -1,10 +1,10 @@
 #pragma once
 struct Position
 {
-	int x, y;
+	int x = 0;
+	int y = 0;
 
 	Position();
-	Position(const int& x, const int& y);
-	~Position();
+	Position(const int x, const int y);
 };
 

@@ -2,18 +2,12 @@
 
 Position::Position()
 {
-	this->x = 0;
-	this->y = 0;
-}
-
-Position::Position(const int& x, const int& y)
-{
 	this->x = x;
 	this->y = y;
 }
 
-Position::~Position()
+Position::Position(int x, int y)
 {
-	delete &(this->x);
-	delete &(this->y);
+	this->x = x;
+	this->y = y;
 }

@@ -49,7 +49,7 @@ void Handler::tick()
 		}
 		std::cout << std::endl;
 	}
-	for (auto &entity : this->entities)
+	for (Entity* entity : this->entities)
 	{
 		entity->tick();
 	}
@@ -67,9 +67,9 @@ Entity* Handler::getEntityHere(const int& x, const int& y)
 		
 		if (player)
 		{
-			for (auto &pos : player->trailLocs)
+			for (Position& pos : player->trailLocs)
 			{
-				if (pos.x == player->pos.x && pos.y == player->pos.y)
+				if (pos.x == x && pos.y == y)
 				{
 					return entity;
 				}

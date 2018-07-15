@@ -15,23 +15,35 @@ Player::~Player()
 }
 void Player::tick()
 {
-	Position oldPos = this->pos;
+	Position* trailpos = new Position(this->pos.x, this->pos.y);
 	Entity::tick();
-	this->addTrail(oldPos);
+	this->addTrail(new Position(trailpos->x, trailpos->y));
+	delete trailpos;
+
 	std::cout << "Testing" << std::endl;
 }
 
-void Player::addTrail(const Position& pos)
+void Player::addTrail(const Position* pos)
 {
 	if (this->trailLocs.size() == this->TrailSize)
 	{
-		this->trailLocs.erase(trailLocs.begin());
+		this->trailLocs.pop_front();
+		this->trailLocs.insert(trailLocs.end(), *pos);
 	}
-
-	this->trailLocs.insert(trailLocs.end(), pos);
+	else
+	{
+		this->trailLocs.insert(trailLocs.end(), *pos);
+	}
 }
 
 void Player::render(const int& x, const int& y)
 {
 	Entity::render(x, y);
+	for (Position& pos : this->trailLocs)
+	{
+		if (pos.x == x && pos.y == y)
+		{
+			std::cout << this->Trail;
+		}
+	}
 }
