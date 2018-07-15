@@ -1,20 +1,24 @@
 #include "Handler.h"
 #include "Program.h"
 #include "Entity.h"
+#include "Player.h"
 #include <chrono>
 #include <thread>
 #include <iostream>
 #include <list>
+#include <string>
+#include <exception>
 
 Handler::Handler()
 {
-	this->addEntity(*(new Player(*(new Position(3, 3)), *(new Vector(1, 0)), '+', '~', 4)));
+
+	this->entities.push_back(new Player(*(new Position(3, 3)), *(new Vector(1, 0)), '+', '~', 4));
 }
 
 
 Handler::~Handler()
 {
-
+	delete[] &(this->entities);
 }
 
 void Handler::tick()
@@ -47,24 +51,19 @@ void Handler::tick()
 	}
 	for (auto &entity : this->entities)
 	{
-		entity.tick();
+		entity->tick();
 	}
-
-}
-void Handler::addEntity(const Entity& entity)
-{
-	this->entities.insert(this->entities.begin(), entity);
 }
 
 Entity* Handler::getEntityHere(const int& x, const int& y)
 {
 	for (auto &entity : this->entities)
 	{
-		if (entity.pos.x == x && entity.pos.y == y)
+		if (entity->pos.x == x && entity->pos.y == y)
 		{
-			return &entity;
+			return entity;
 		}
-		Player* player = dynamic_cast<Player*>(&entity);
+		Player* player = dynamic_cast<Player*>(entity);
 		
 		if (player)
 		{
@@ -72,7 +71,7 @@ Entity* Handler::getEntityHere(const int& x, const int& y)
 			{
 				if (pos.x == player->pos.x && pos.y == player->pos.y)
 				{
-					return &entity;
+					return entity;
 				}
 			}
 		}

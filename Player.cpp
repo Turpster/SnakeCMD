@@ -4,21 +4,21 @@ Player::Player(const Position& pos, const Vector& vector, const char& model, con
 	: Entity(pos, vector, model)
 {
 	this->Trail = trail;
-	this->TrailSize;
+	this->TrailSize = trailsize;
 }
 Player::~Player()
 {
-
+	Entity::~Entity();
+	delete &(this->TrailSize);
+	delete[] &(this->trailLocs);
+	delete &(this->Trail);
 }
 void Player::tick()
 {
 	Position oldPos = this->pos;
 	Entity::tick();
-
-	if (!(this->pos.x == oldPos.x && this->pos.y == oldPos.y))
-	{
-		Player::addTrail(oldPos);
-	}
+	this->addTrail(oldPos);
+	std::cout << "Testing" << std::endl;
 }
 
 void Player::addTrail(const Position& pos)

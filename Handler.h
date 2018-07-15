@@ -9,12 +9,11 @@
 class Handler
 {
 public:
-	std::list<Entity> entities;
+	std::list<Entity*> entities;
 
 	Handler();
 	~Handler();
 	void tick();
-	void addEntity(const Entity& entity);
 	Entity* getEntityHere(const int& x, const int& y);
 };
 

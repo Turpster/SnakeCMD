@@ -4,12 +4,11 @@
 #include "Vector.h"
 #include "Entity.h"
 
-class Entity
+class Entity 
 {
 public:
 	Position pos;
 	Vector vector;
-
 	char model;
 
 	Entity(const Position& pos, const Vector& vector, const char& model);
