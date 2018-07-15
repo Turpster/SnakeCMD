@@ -15,12 +15,9 @@ Player::~Player()
 }
 void Player::tick()
 {
-	Position* trailpos = new Position(this->pos.x, this->pos.y);
+	Position trailpos(this->pos.x, this->pos.y);
 	Entity::tick();
-	this->addTrail(new Position(trailpos->x, trailpos->y));
-	delete trailpos;
-
-	std::cout << "Testing" << std::endl;
+	this->addTrail(new Position(trailpos.x, trailpos.y));
 }
 
 void Player::addTrail(const Position* pos)
