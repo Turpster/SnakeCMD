@@ -12,7 +12,7 @@
 Handler::Handler()
 {
 
-	this->entities.push_back(new Player(*(new Position(3, 3)), *(new Vector(1, 0)), '+', '~', 4));
+	this->entities.push_back(new Player(*(new Position(3, 3)), *(new Vector(1, 0)), '+', '~', 3));
 }
 
 
@@ -40,7 +40,7 @@ void Handler::tick()
 			}
 			else if (getEntityHere(x, y) == nullptr)
 			{
-				std::cout << '-';
+				std::cout << ' ';
 			}
 			else
 			{
