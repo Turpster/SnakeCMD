@@ -12,11 +12,8 @@ Game::Game() : player(Location(0, 0), Vector(1, 0), '+', '~', 4), food(Location(
 	system("COLOR 0F");
 
 	srand(time(0));
-	player.loc.x = (rand() % (Game::WIDTH - 2)) + 1;
-	player.loc.y = (rand() % (Game::HEIGHT - 2)) + 1;
-
-	food.loc.x = (rand() % (Game::WIDTH - 2)) + 1;
-	food.loc.y = (rand() % (Game::HEIGHT - 2)) + 1;
+	this->randPos(this->player);
+	this->randPos(this->food);
 }
 
 void Game::KeyPressed(char key)
@@ -91,12 +88,17 @@ void Game::Tick()
 	if (player.loc == food.loc)
 	{
 		player.tailsize++;
-		food.loc.x = (rand() % (Game::WIDTH - 2)) + 1;
-		food.loc.y = (rand() % (Game::HEIGHT - 2)) + 1;
+		this->randPos(this->food);
 	}
 
 	std::cout << "X: " << food.loc.x << std::endl;
 	std::cout << "Y: " << food.loc.y << std::endl;
+}
+
+void Game::randPos(Entity& entity)
+{
+	entity.loc.x = (rand() % (Game::WIDTH - 2)) + 1;
+	entity.loc.y = (rand() % (Game::HEIGHT - 2)) + 1;
 }
 
 Entity* Game::getEntityHere(int x, int y)

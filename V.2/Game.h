@@ -10,6 +10,8 @@ class Game
 {
 protected:
 	bool m_Running = false;
+
+	void randPos(Entity& entity);
 public:
 	Player player;
 	Food food;
