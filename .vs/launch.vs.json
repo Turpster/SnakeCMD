@@ -12,6 +12,17 @@
       "MIMode": "gdb",
       "miDebuggerPath": "${env.MINGW_PREFIX}\\bin\\gdb.exe",
       "externalConsole": true
+    },
+    {
+      "type": "cppdbg",
+      "name": "V.2",
+      "project": "V.2",
+      "cwd": "${workspaceRoot}",
+      "program": "${debugInfo.target}",
+      "processId": 0,
+      "MIMode": "gdb",
+      "miDebuggerPath": "${env.MINGW_PREFIX}\\bin\\gdb.exe",
+      "externalConsole": true
     }
   ]
 }
