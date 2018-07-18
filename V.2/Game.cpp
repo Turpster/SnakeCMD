@@ -22,7 +22,27 @@ Game::Game() : player(Location(0, 0), Vector(1, 0), '+', '~', 4), food(Location(
 
 void Game::KeyPressed(char key)
 {
-
+	switch (key)
+	{
+	case 'a': //left
+		player.vec.xv = -1;
+		player.vec.yv = 0;
+		return;
+	case 'w': //up
+		player.vec.xv = 0;
+		player.vec.yv = -1;
+		return;
+	case 'd': //right
+		player.vec.xv = 1;
+		player.vec.yv = 0;
+		return;
+	case 's': //sdown
+		player.vec.xv = 0;
+		player.vec.yv = 1;
+		return;
+	default:
+		return;
+	}
 }
 
 int Game::Run()
