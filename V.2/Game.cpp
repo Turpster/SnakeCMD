@@ -7,7 +7,7 @@
 #include <ctime>
 
 
-Game::Game() : player(Location(0, 0), Vector(1, 0), '+', '~', 4), food(Location(0, 0), Vector(0, 0), '@')
+Game::Game() : player(Location(0, 0), Vector(1, 0), '+', '~', 4), food(Location(0, 0), Vector(0, 0), '@'), input(this)
 {
 	system("COLOR 0F");
 
@@ -17,6 +17,11 @@ Game::Game() : player(Location(0, 0), Vector(1, 0), '+', '~', 4), food(Location(
 
 	food.loc.x = (rand() % Game::WIDTH - 1) + 1;
 	food.loc.y = (rand() % Game::HEIGHT - 1) + 1;
+
+}
+
+void Game::KeyPressed(char key)
+{
 
 }
 

@@ -4,6 +4,7 @@
 #include "Location.h"
 #include "Vector.h"
 #include "Food.h"
+#include "Input.h"
 
 class Game
 {
@@ -12,6 +13,7 @@ protected:
 public:
 	Player player;
 	Food food;
+	Input input;
 
 	static const int m_TicksPS = 5;
 
@@ -19,6 +21,8 @@ public:
 	static const int HEIGHT = 25;
 
 	Entity* getEntityHere(int x, int y);
+
+	void KeyPressed(char key);
 	
 	Game();
 	int Run();
