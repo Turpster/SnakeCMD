@@ -13,6 +13,7 @@ void Player::tick()
 {
 	Location oldloc = this->loc;
 	Entity::tick();
+
 	if (oldloc != this->loc)
 	{
 		this->addTail(oldloc);
@@ -35,7 +36,7 @@ void Player::render(int x, int y)
 
 	for (Location& loc : this->tailLocs)
 	{
-		if (loc.x == x && loc.y == y)
+		if (loc.x == x && loc.y == y && loc != this->loc)
 		{
 			std::cout << this->tail;
 		}

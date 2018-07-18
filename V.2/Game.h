@@ -15,7 +15,7 @@ public:
 	Food food;
 	Input input;
 
-	static const int m_TicksPS = 5;
+	static const int m_TicksPS = 60;
 
 	static const int WIDTH = 70; 
 	static const int HEIGHT = 25;
