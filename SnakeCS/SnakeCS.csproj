@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Entity.cs" />
     <Compile Include="Handler.cs" />
+    <Compile Include="keyInput.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

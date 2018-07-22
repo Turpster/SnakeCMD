@@ -10,7 +10,7 @@ namespace SnakeCS
 
         private Thread thread;
 
-        static public int TPS = 5;
+        static public int TPS = 30;
 
         public static int WIDTH = 70, HEIGHT = 25;
 
