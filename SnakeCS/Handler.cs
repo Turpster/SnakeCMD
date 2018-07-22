@@ -6,8 +6,6 @@ namespace SnakeCS
     {
         Player player;
 
-        Random random;
-
         KeyInput keyInput;
         
         public Handler()

@@ -21,8 +21,20 @@ namespace SnakeCS
 
         public virtual void Tick()
         {
-            this.location.x += this.vector.xv;
-            this.location.y += this.vector.yv;
+            if (location.x + vector.xv > 0 && location.x + vector.xv < Program.WIDTH)
+            {
+                location.x += vector.xv;
+            }
+            else
+            { 
+                /*
+                 * Make better exit method
+                 */
+            }
+            if (location.y + vector.yv > 0 && location.y + vector.yv < Program.HEIGHT)
+            {
+                location.y += vector.yv;
+            }
         }
 
         public virtual void Render(int x, int y)
