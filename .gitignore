@@ -1,9 +1,11 @@
 .vs/**
 SnakeCS/bin/**
 SnakeCPP/Debug/**
+SnakeCPP/Release/**
 SnakeCPP/x64/**
 SnakeCPP/x86/**
 SnakeCS/obj/**
 Debug/**
+Release/**
 x64/**
 x86/**
