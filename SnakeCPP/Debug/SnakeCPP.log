@@ -1,0 +1,9 @@
+﻿  Entity.cpp
+  Food.cpp
+  Game.cpp
+d:\dev\projects\snakecmd\snakecpp\v.2\game.cpp(14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Input.cpp
+  Main.cpp
+  Player.cpp
+  Generating Code...
+  SnakeCPP.vcxproj -> D:\dev\Projects\SnakeCMD\Debug\SnakeCPP.exe

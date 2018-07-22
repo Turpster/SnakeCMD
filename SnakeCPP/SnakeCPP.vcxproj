@@ -18,6 +18,23 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="V.2\Entity.cpp" />
+    <ClCompile Include="V.2\Food.cpp" />
+    <ClCompile Include="V.2\Game.cpp" />
+    <ClCompile Include="V.2\Input.cpp" />
+    <ClCompile Include="V.2\Main.cpp" />
+    <ClCompile Include="V.2\Player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="V.2\Entity.h" />
+    <ClInclude Include="V.2\Food.h" />
+    <ClInclude Include="V.2\Game.h" />
+    <ClInclude Include="V.2\Input.h" />
+    <ClInclude Include="V.2\Location.h" />
+    <ClInclude Include="V.2\Player.h" />
+    <ClInclude Include="V.2\Vector.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{574B5BC3-A512-47C6-AF77-F2217DCAD2DD}</ProjectGuid>
@@ -114,8 +131,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

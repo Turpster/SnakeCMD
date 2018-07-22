@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="V.2\Entity.cpp" />
+    <ClCompile Include="V.2\Food.cpp" />
+    <ClCompile Include="V.2\Game.cpp" />
+    <ClCompile Include="V.2\Input.cpp" />
+    <ClCompile Include="V.2\Main.cpp" />
+    <ClCompile Include="V.2\Player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="V.2\Entity.h" />
+    <ClInclude Include="V.2\Food.h" />
+    <ClInclude Include="V.2\Game.h" />
+    <ClInclude Include="V.2\Input.h" />
+    <ClInclude Include="V.2\Location.h" />
+    <ClInclude Include="V.2\Player.h" />
+    <ClInclude Include="V.2\Vector.h" />
+  </ItemGroup>
+</Project>
