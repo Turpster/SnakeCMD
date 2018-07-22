@@ -1,3 +1,9 @@
 .vs/**
 SnakeCS/bin/**
+SnakeCPP/Debug/**
+SnakeCPP/x64/**
+SnakeCPP/x86/**
 SnakeCS/obj/**
+Debug/**
+x64/**
+x86/**
