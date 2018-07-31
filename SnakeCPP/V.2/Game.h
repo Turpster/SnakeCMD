@@ -17,10 +17,10 @@ public:
 	Food food;
 	Input input;
 
-	static const int m_TicksPS = 60;
+	static const int m_TicksPS = 15;
 
-	static const int WIDTH = 70; 
-	static const int HEIGHT = 25;
+	static const int WIDTH = 25; 
+	static const int HEIGHT = 10;
 
 	Entity* getEntityHere(int x, int y);
 

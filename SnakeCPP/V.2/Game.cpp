@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 
 
 Game::Game() : player(Location(0, 0), Vector(1, 0), '+', '~', 4), food(Location(0, 0), Vector(0, 0), '@'), input(this)
@@ -89,6 +90,7 @@ void Game::Tick()
 	{
 		player.tailsize++;
 		this->randPos(this->food);
+		Beep(1523, 5);
 	}
 
 	std::cout << "X: " << food.loc.x << std::endl;

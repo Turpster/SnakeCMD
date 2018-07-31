@@ -5,17 +5,24 @@ namespace SnakeCS
     public class Handler
     {
         Player player;
+        Food food;
+
+        int score = 0;
 
         KeyInput keyInput;
         
         public Handler()
         {
             Random random = new Random();
-            player = new Player(new Location((random.Next(Program.WIDTH - 2) + 1), (random.Next(Program.HEIGHT - 2) + 1)), new Vector(1, 0), '+', '~', 4);
+            player = new Player(new Location(3, 3), new Vector(1, 0), '+', '~', 4);
+            food = new Food(new Location(0, 0), new Vector(0, 0), '@');
+
+            Entity.RandomTeleportEntity(player);
+            Entity.RandomTeleportEntity(food);
 
             keyInput = new KeyInput(this);
         }
-
+        
         public void Tick()
         {
             Console.Clear();
@@ -31,9 +38,9 @@ namespace SnakeCS
                     {
                         Console.Write('#');
                     }
-                    else if (getEntityHere(x, y) != null)
+                    else if (GetEntityHere(x, y) != null)
                     {
-                        getEntityHere(x, y).Render(x, y);
+                        GetEntityHere(x, y).Render(x, y);
                     }
                     else
                     {
@@ -44,6 +51,14 @@ namespace SnakeCS
             }
 
             this.player.Tick();
+            this.food.Tick();
+
+            if (this.player.location.x == this.food.location.x && this.player.location.y == this.food.location.y)
+            {
+                this.player.TailSize += 1;
+                score++;
+                Entity.RandomTeleportEntity(food);
+            }
         }
 
         public void input(ConsoleKeyInfo key)
@@ -70,17 +85,24 @@ namespace SnakeCS
             }
         }
 
-        private Entity getEntityHere(int x, int y)
+        private Entity GetEntityHere(int x, int y)
         {
-            if (player.location.x == x && player.location.y == y)
+            if (food.location.x == x && food.location.y == y)
+            {
+                return this.food;
+            }
+            else if (player.location.x == x && player.location.y == y)
             {
                 return this.player;
             }
-            foreach (Location loc in player.tailLocs)
+            else
             {
-                if (x == loc.x && y == loc.y)
+                foreach (Location loc in player.tailLocs)
                 {
-                    return this.player;
+                    if (x == loc.x && y == loc.y)
+                    {
+                        return this.player;
+                    }
                 }
             }
             return null;

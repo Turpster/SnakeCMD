@@ -12,6 +12,13 @@ namespace SnakeCS
         public Vector vector;
         readonly char model;
 
+        public static void RandomTeleportEntity(Entity entity)
+        {
+            Random random = new Random();
+            entity.location.x = (random.Next( Program.WIDTH - 2)) + 1;
+            entity.location.y = (random.Next( Program.HEIGHT - 2)) + 1;
+        }
+
         public Entity(Location location, Vector vector, char model)
         {
             this.location = location;

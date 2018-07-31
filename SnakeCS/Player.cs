@@ -10,7 +10,7 @@ namespace SnakeCS
     class Player : Entity
     {
         char Tail;
-        int TailSize;
+        public int TailSize;
 
         public ArrayList tailLocs = new ArrayList();
 

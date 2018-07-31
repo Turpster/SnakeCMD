@@ -12,7 +12,7 @@ namespace SnakeCS
 
         static public int TPS = 30;
 
-        public static int WIDTH = 70, HEIGHT = 25;
+        public static int WIDTH = 20, HEIGHT = 10;
 
         static void Main(string[] args)
         {
