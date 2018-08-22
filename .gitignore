@@ -1,3 +1,4 @@
 SnakeCPP/cmake-build-debug/**
 SnakeCPP/.idea/**
 .idea/**
+**/idea/**
