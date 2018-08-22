@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SnakeCPP"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SnakeCPP">
+				<Option output="D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/SnakeCPP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 SnakeCPP"/>
+					<CompileFile command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SnakeCPP/fast">
+				<Option output="D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/SnakeCPP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 SnakeCPP/fast"/>
+					<CompileFile command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw/mingw64/bin/mingw32-make.exe -f &quot;D:/dev/Projects/SnakeCMD/SnakeCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Entity.cpp">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Entity.h">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Food.cpp">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Food.h">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Game.cpp">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Game.h">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Input.cpp">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Input.h">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Main.cpp">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Player.cpp">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/Player.h">
+			<Option target="SnakeCPP"/>
+		</Unit>
+		<Unit filename="D:/dev/Projects/SnakeCMD/SnakeCPP/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
